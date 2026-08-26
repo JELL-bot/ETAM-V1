@@ -1,5 +1,5 @@
 /**
- * Harbour Ledger design reminder: Contemporary industrial editorial. Use Dockline Blue,
+ * BIE design reminder: Contemporary industrial editorial. Use Dockline Blue,
  * warehouse ivory, restrained safety orange, precise asymmetry, and operational clarity.
  */
 import { FormEvent, useState } from "react";
@@ -336,11 +336,31 @@ export default function Home() {
   const [language, setLanguage] = useState<Locale>("en");
   const c = copy[language];
 
-  function submitInquiry(event: FormEvent<HTMLFormElement>) {
+function submitInquiry(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    toast.success(c.success, { duration: 5000 });
-    event.currentTarget.reset();
-  }
+  const formData = new FormData(event.currentTarget);
+
+  const name = formData.get("name")?.toString().trim() || "-";
+  const company = formData.get("company")?.toString().trim() || "-";
+  const email = formData.get("email")?.toString().trim() || "-";
+  const phone = formData.get("phone")?.toString().trim() || "-";
+  const needs = formData.get("needs")?.toString().trim() || "-";
+
+  const message = [
+    "Hello BIE Warehouse, I would like to make an inquiry.",
+    "",
+    `Name: ${name}`,
+    `Company: ${company}`,
+    `Email: ${email}`,
+    `Phone: ${phone}`,
+    `Requirements: ${needs}`,
+  ].join("\n");
+
+  const whatsappNumber = "6281298981300";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message )}`;
+
+  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+}
 
   return (
     <div className="site-shell" lang={language === "zh" ? "zh-CN" : language}>
@@ -431,21 +451,55 @@ export default function Home() {
             <p>{c.spacesText}</p>
           </div>
           <div className="space-grid">
-            {c.units.map((unit, index) => (
-              <article className={`space-card card-${index + 1}`} key={unit.name}>
-                <div className="space-topline"><span><img src={assets.logo} alt="" />{c.example}</span><span>0{index + 1}</span></div>
+            {c.units.map((unit, index) => {
+              const isInDevelopment = index === 1 || index === 2;
+
+              return (
+            <article
+  className={`space-card card-${index + 1}${isInDevelopment ? " is-development" : ""}`}
+  key={unit.name}
+>
+              {isInDevelopment && (
+  <div className="development-flag">IN DEVELOPMENT</div>
+)}
+              <div className="space-card-content">
+                <div className="space-topline">
+                  <span>
+                    <img src={assets.logo} alt="" />
+                    {c.example}
+                  </span>
+                  <span>0{index + 1}</span>
+                </div>
+        
                 <h3>{unit.name}</h3>
+        
                 <div className="space-facts">
                   <div><p>{c.size}</p><strong>{unit.size}</strong></div>
                   <div><p>{c.storage}</p><strong>{unit.use}</strong></div>
                   <div><p>{c.access}</p><strong>{unit.access}</strong></div>
                 </div>
+        
                 <div className="space-footer">
                   <span>{unit.rate}</span>
-                  <button type="button" onClick={() => scrollToId("contact")} aria-label={`${c.viewDetails}: ${unit.name}`}><ArrowUpRight size={18} /></button>
+                  <button
+                    type="button"
+                    onClick={() => scrollToId("contact")}
+                    aria-label={`${c.viewDetails}: ${unit.name}`}
+                  >
+                    <ArrowUpRight size={18} />
+                  </button>
                 </div>
-              </article>
-            ))}
+              </div>
+        
+              {isInDevelopment && (
+                <div className="development-overlay" role="status" aria-label="In development">
+                  <span>IN DEVELOPMENT</span>
+                  <p>New warehouse space coming soon</p>
+                </div>
+              )}
+            </article>
+          );
+        })}           
           </div>
         </section>
 
