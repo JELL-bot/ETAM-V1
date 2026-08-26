@@ -18,7 +18,6 @@ import {
   ShieldCheck,
   Warehouse,
 } from "lucide-react";
-import { toast } from "sonner";
 
 type Locale = "en" | "zh" | "id";
 
@@ -490,13 +489,6 @@ function submitInquiry(event: FormEvent<HTMLFormElement>) {
                   </button>
                 </div>
               </div>
-        
-              {isInDevelopment && (
-                <div className="development-overlay" role="status" aria-label="In development">
-                  <span>IN DEVELOPMENT</span>
-                  <p>New warehouse space coming soon</p>
-                </div>
-              )}
             </article>
           );
         })}           
