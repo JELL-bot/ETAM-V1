@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://jell-bot.github.io/ETAM-V1/sitemap.xml
