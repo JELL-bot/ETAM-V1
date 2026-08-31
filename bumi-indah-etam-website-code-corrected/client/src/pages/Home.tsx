@@ -243,7 +243,7 @@ const copy = {
     navFaq: "FAQ",
     navContact: "Kontak",
     navCta: "Minta ruang",
-    eyebrow: "Sewa gudang · Dibuat untuk pergerakan bisnis",
+    eyebrow: "Sewa gudang Samarinda · Dibuat untuk pergerakan bisnis",
     heroTitle: "Siapkan ruang untuk pengiriman Anda berikutnya.",
     heroText:
       "Ruang gudang fleksibel untuk bisnis yang berkembang, operasional lokal, dan perdagangan lintas negara. Ceritakan kebutuhan penyimpanan Anda — kami akan membantu menemukan pilihan yang tepat.",
