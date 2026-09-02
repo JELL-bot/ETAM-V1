@@ -70,8 +70,8 @@ const copy = {
     viewDetails: "Request details",
     units: [
       {
-        name: "100 m² Bay",
-        size: "100 m² / 1,076 sq ft",
+        name: "550 m² Bay",
+        size: "550 m² / 5920,15 sq ft",
         use: "Small inventory & e-commerce",
         access: "Shared loading access",
         rate: "Monthly terms on enquiry",
@@ -180,7 +180,7 @@ const copy = {
     access: "出入条件",
     viewDetails: "咨询详情",
     units: [
-      { name: "100 m² 仓位", size: "100 m² / 1,076 平方英尺", use: "小型库存与电商", access: "共享装卸通道", rate: "月租条款面议" },
+      { name: "550 m² 仓位", size: "550 m² / 5920,15 平方英尺", use: "小型库存与电商", access: "共享装卸通道", rate: "月租条款面议" },
       { name: "250 m² 仓库", size: "250 m² / 2,691 平方英尺", use: "托盘存储与配送", access: "专用装卸月台", rate: "提供灵活租期" },
       { name: "500 m² 贸易空间", size: "500 m² / 5,382 平方英尺", use: "大批量运营", access: "货场及装卸通道", rate: "场地条款面议" },
     ],
@@ -271,7 +271,7 @@ const copy = {
     access: "Akses",
     viewDetails: "Minta detail",
     units: [
-      { name: "Ruang 100 m²", size: "100 m² / 1.076 sq ft", use: "Inventaris kecil & e-commerce", access: "Akses bongkar bersama", rate: "Syarat bulanan sesuai permintaan" },
+      { name: "Ruang 550 m²", size: "550 m² / 5920,15 sq ft", use: "Inventaris kecil & e-commerce", access: "Akses bongkar bersama", rate: "Syarat bulanan sesuai permintaan" },
       { name: "Gudang 250 m²", size: "250 m² / 2.691 sq ft", use: "Penyimpanan palet & distribusi", access: "Area bongkar khusus", rate: "Pilihan masa sewa fleksibel" },
       { name: "Ruang Dagang 500 m²", size: "500 m² / 5.382 sq ft", use: "Operasi bervolume tinggi", access: "Akses halaman & bongkar", rate: "Syarat lokasi sesuai permintaan" },
     ],
