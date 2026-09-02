@@ -113,7 +113,7 @@ const copy = {
     faqIntro: "The answers below are a practical guide. Your final quotation will confirm the exact space, availability, access, and commercial terms for your enquiry.",
     faqItems: [
       { q: "What is the minimum rental period?", a: "The minimum rental period is one year. This provides tenants with a stable and suitable space for their business operations." },
-      { q: "What warehouse sizes are available?", a: "Our current space has more than 30 warehouse units built and available across the existing development. Additional units are being developed as part of our continued expansion." },
+      { q: "What warehouse sizes are available?", a: "We currently offer more than 35 units in the same standard size. For larger space requirements, please consult our team regarding availability and options for combining adjacent units. Additional warehouse sizes may also be introduced as our facilities continue to develop." },
       { q: "How many units are available?", a: "Availability changes as units are reserved or leased. Share your preferred move-in date and size so we can confirm the latest options." },
       { q: "Is a security deposit required?", a: "Deposit requirements are confirmed as part of the rental proposal and lease agreement." },
       { q: "Are utilities included in the rental?", a: "Utility arrangements can vary by space and use. We will outline the applicable inclusions and any charges in your proposal." },
@@ -205,7 +205,7 @@ const copy = {
     faqIntro: "以下内容为实用参考。最终报价会根据您的咨询，确认具体仓位、可用情况、出入安排和商业条款。",
     faqItems: [
       { q: "最短租期是多久？", a: "最短租期为一年。这为租户提供稳定且适合业务运营的空间。" },
-      { q: "有哪些仓库面积可供选择？", a: "目前开发项目已建成并可提供超过 30 个仓库单元。随着持续扩展，更多单元正在开发中。" },
+      { q: "有哪些仓库面积可供选择？", a: "目前提供超过35个标准尺寸相同的仓库单元。如需更大的仓储空间，欢迎先咨询我们的团队，了解仓库的可用情况及相邻单元合并方案。随着设施持续发展，未来也可能提供其他尺寸的仓库。" },
       { q: "目前有多少个仓位可租？", a: "仓位会随着预订或签约而变化。请告知您希望进驻的日期和面积，我们会确认最新选项。" },
       { q: "需要支付押金吗？", a: "押金要求会在租赁方案和合同中确认。" },
       { q: "租金是否包含水电？", a: "水电安排可能因空间和用途而异。我们会在方案中列明包含项目及适用费用。" },
@@ -296,7 +296,7 @@ const copy = {
     faqIntro: "Jawaban berikut adalah panduan praktis. Penawaran akhir Anda akan mengonfirmasi ruang, ketersediaan, akses, dan ketentuan komersial yang tepat.",
     faqItems: [
       { q: "Berapa masa sewa minimum?", a: "Masa sewa minimum adalah satu tahun. Ini memberikan penyewa ruang yang stabil dan sesuai untuk operasi bisnis mereka." },
-      { q: "Ukuran gudang apa yang tersedia?", a: "Pengembangan kami saat ini memiliki lebih dari 30 unit gudang yang telah dibangun dan tersedia. Unit tambahan sedang dikembangkan sebagai bagian dari ekspansi berkelanjutan kami." },
+      { q: "Ukuran gudang apa yang tersedia?", a: "Saat ini tersedia lebih dari 35 unit dengan ukuran standar yang sama. Untuk kebutuhan ruang yang lebih besar, silakan berkonsultasi terlebih dahulu dengan tim kami mengenai ketersediaan dan opsi penggabungan unit. Ukuran gudang lainnya juga dapat tersedia seiring dengan pengembangan fasilitas kami." },
       { q: "Berapa unit yang tersedia?", a: "Ketersediaan berubah saat unit dipesan atau disewa. Beri tahu tanggal masuk dan ukuran pilihan Anda agar kami dapat mengonfirmasi opsi terbaru." },
       { q: "Apakah diperlukan uang jaminan?", a: "Persyaratan deposit akan dikonfirmasi sebagai bagian dari proposal sewa dan perjanjian sewa." },
       { q: "Apakah utilitas sudah termasuk dalam sewa?", a: "Pengaturan utilitas dapat berbeda menurut ruang dan penggunaannya. Kami akan menjelaskan cakupan dan biaya yang berlaku dalam proposal Anda." },
