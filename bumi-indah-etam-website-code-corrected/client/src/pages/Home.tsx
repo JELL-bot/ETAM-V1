@@ -333,8 +333,14 @@ function scrollToId(id: string) {
 
 function getLocaleFromUrl(): Locale {
   if (typeof window === "undefined") return "en";
-  const requestedLocale = new URLSearchParams(window.location.search).get("lang");
-  return requestedLocale === "id" || requestedLocale === "zh" ? requestedLocale : "en";
+
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get("lang")?.toLowerCase();
+
+  if (lang === "id") return "id";
+  if (lang === "zh") return "zh";
+
+  return "en";
 }
 
 function setLocaleInUrl(locale: Locale) {
