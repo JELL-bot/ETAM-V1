@@ -2,7 +2,7 @@
  * BIE design reminder: Contemporary industrial editorial. Use Dockline Blue,
  * warehouse ivory, restrained safety orange, precise asymmetry, and operational clarity.
  */
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   ArrowDown,
@@ -331,9 +331,41 @@ function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function getLocaleFromUrl(): Locale {
+  if (typeof window === "undefined") return "en";
+  const requestedLocale = new URLSearchParams(window.location.search).get("lang");
+  return requestedLocale === "id" || requestedLocale === "zh" ? requestedLocale : "en";
+}
+
+function setLocaleInUrl(locale: Locale) {
+  if (typeof window === "undefined") return;
+  const url = new URL(window.location.href);
+  if (locale === "en") {
+    url.searchParams.delete("lang");
+  } else {
+    url.searchParams.set("lang", locale);
+  }
+  window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
 export default function Home() {
-  const [language, setLanguage] = useState<Locale>("en");
+  const [language, setLanguage] = useState<Locale>(getLocaleFromUrl);
   const c = copy[language];
+
+  useEffect(() => {
+    document.documentElement.lang = language === "zh" ? "zh-CN" : language;
+    document.title =
+      language === "id"
+        ? "Sewa Gudang Samarinda | BUMI INDAH ETAM"
+        : language === "zh"
+          ? "三马林达仓库出租 | BUMI INDAH ETAM"
+          : "Warehouse Rental Samarinda | BUMI INDAH ETAM";
+  }, [language]);
+
+  function handleLanguageChange(nextLocale: Locale) {
+    setLanguage(nextLocale);
+    setLocaleInUrl(nextLocale);
+  }
 
 function submitInquiry(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -380,7 +412,7 @@ function submitInquiry(event: FormEvent<HTMLFormElement>) {
         <div className="header-actions">
           <label className="language-select" aria-label="Select website language">
             <Globe2 size={15} strokeWidth={1.8} />
-            <select value={language} onChange={(event) => setLanguage(event.target.value as Locale)}>
+            <select value={language} onChange={(event) => handleLanguageChange(event.target.value as Locale)}>
               <option value="en">EN</option>
               <option value="zh">中文</option>
               <option value="id">ID</option>
