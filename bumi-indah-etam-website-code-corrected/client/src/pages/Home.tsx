@@ -393,7 +393,7 @@ function submitInquiry(event: FormEvent<HTMLFormElement>) {
     `Requirements: ${needs}`,
   ].join("\n");
 
-  const whatsappNumber = "6281298981300";
+  const whatsappNumber = "6285117589755";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message )}`;
 
   window.open(whatsappUrl, "_blank", "noopener,noreferrer");
